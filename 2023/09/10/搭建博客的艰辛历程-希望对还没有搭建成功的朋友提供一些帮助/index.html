@@ -13,24 +13,28 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2023/09/09/people are really easy to die/"/>
+    <link rel="canonical" href="http://example.com/2023/09/10/搭建博客的艰辛历程-希望对还没有搭建成功的朋友提供一些帮助/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="人真的很容易 每天不被累死, 就被困死 !">
+        <meta name="description" content="开场的胡言乱语​	搭建博客的过程属实是有些艰辛的,真的希望大家能一次性成功,但是每个人的 电脑不同,环境不同,情况不同,需求不同,所以能否帮上大家就另说了. ​	Git安装是安装上了但是没有像网上说的用git来配置安装hexo,全部步骤都是在管理员身份运行下用cmd进行的操作. 正文—搭建的过程及一些错误的解决方法​	好了正文开始,因为搭建的时候完全没想要记录,我现在只能说凭记忆来讲述过程,大部分">
 <meta property="og:type" content="article">
-<meta property="og:title" content="People are really easy to die">
-<meta property="og:url" content="http://example.com/2023/09/09/People%20are%20really%20easy%20to%20die/index.html">
+<meta property="og:title" content="搭建博客的艰辛历程(希望对还没有搭建成功的朋友提供一些帮助)">
+<meta property="og:url" content="http://example.com/2023/09/10/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%89%B0%E8%BE%9B%E5%8E%86%E7%A8%8B-%E5%B8%8C%E6%9C%9B%E5%AF%B9%E8%BF%98%E6%B2%A1%E6%9C%89%E6%90%AD%E5%BB%BA%E6%88%90%E5%8A%9F%E7%9A%84%E6%9C%8B%E5%8F%8B%E6%8F%90%E4%BE%9B%E4%B8%80%E4%BA%9B%E5%B8%AE%E5%8A%A9/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="人真的很容易 每天不被累死, 就被困死 !">
+<meta property="og:description" content="开场的胡言乱语​	搭建博客的过程属实是有些艰辛的,真的希望大家能一次性成功,但是每个人的 电脑不同,环境不同,情况不同,需求不同,所以能否帮上大家就另说了. ​	Git安装是安装上了但是没有像网上说的用git来配置安装hexo,全部步骤都是在管理员身份运行下用cmd进行的操作. 正文—搭建的过程及一些错误的解决方法​	好了正文开始,因为搭建的时候完全没想要记录,我现在只能说凭记忆来讲述过程,大部分">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2023/09/09/People%20are%20really%20easy%20to%20die/die.png">
-<meta property="article:published_time" content="2023-09-09T09:55:21.000Z">
-<meta property="article:modified_time" content="2023-09-09T10:15:12.913Z">
+<meta property="og:image" content="http://example.com/2023/09/10/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%89%B0%E8%BE%9B%E5%8E%86%E7%A8%8B-%E5%B8%8C%E6%9C%9B%E5%AF%B9%E8%BF%98%E6%B2%A1%E6%9C%89%E6%90%AD%E5%BB%BA%E6%88%90%E5%8A%9F%E7%9A%84%E6%9C%8B%E5%8F%8B%E6%8F%90%E4%BE%9B%E4%B8%80%E4%BA%9B%E5%B8%AE%E5%8A%A9/%E6%89%8E%E5%BF%83%E4%BA%86%E8%80%81%E9%93%81.png">
+<meta property="og:image" content="http://example.com/2023/09/10/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%89%B0%E8%BE%9B%E5%8E%86%E7%A8%8B-%E5%B8%8C%E6%9C%9B%E5%AF%B9%E8%BF%98%E6%B2%A1%E6%9C%89%E6%90%AD%E5%BB%BA%E6%88%90%E5%8A%9F%E7%9A%84%E6%9C%8B%E5%8F%8B%E6%8F%90%E4%BE%9B%E4%B8%80%E4%BA%9B%E5%B8%AE%E5%8A%A9/NodeJs%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84.png">
+<meta property="og:image" content="http://example.com/2023/09/10/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%89%B0%E8%BE%9B%E5%8E%86%E7%A8%8B-%E5%B8%8C%E6%9C%9B%E5%AF%B9%E8%BF%98%E6%B2%A1%E6%9C%89%E6%90%AD%E5%BB%BA%E6%88%90%E5%8A%9F%E7%9A%84%E6%9C%8B%E5%8F%8B%E6%8F%90%E4%BE%9B%E4%B8%80%E4%BA%9B%E5%B8%AE%E5%8A%A9/%E6%88%91%E7%9C%9F%E6%98%AF%E5%A4%AA%E8%B4%B4%E5%BF%83%E4%BA%86.png">
+<meta property="og:image" content="http://example.com/2023/09/10/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%89%B0%E8%BE%9B%E5%8E%86%E7%A8%8B-%E5%B8%8C%E6%9C%9B%E5%AF%B9%E8%BF%98%E6%B2%A1%E6%9C%89%E6%90%AD%E5%BB%BA%E6%88%90%E5%8A%9F%E7%9A%84%E6%9C%8B%E5%8F%8B%E6%8F%90%E4%BE%9B%E4%B8%80%E4%BA%9B%E5%B8%AE%E5%8A%A9/%E8%B4%B4%E5%BF%832.0.png">
+<meta property="og:image" content="http://example.com/2023/09/10/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%89%B0%E8%BE%9B%E5%8E%86%E7%A8%8B-%E5%B8%8C%E6%9C%9B%E5%AF%B9%E8%BF%98%E6%B2%A1%E6%9C%89%E6%90%AD%E5%BB%BA%E6%88%90%E5%8A%9F%E7%9A%84%E6%9C%8B%E5%8F%8B%E6%8F%90%E4%BE%9B%E4%B8%80%E4%BA%9B%E5%B8%AE%E5%8A%A9/hexo%E7%BD%91%E9%A1%B5.png">
+<meta property="article:published_time" content="2023-09-10T02:43:20.000Z">
+<meta property="article:modified_time" content="2023-09-10T04:02:17.596Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2023/09/09/People%20are%20really%20easy%20to%20die/die.png">
+<meta name="twitter:image" content="http://example.com/2023/09/10/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%89%B0%E8%BE%9B%E5%8E%86%E7%A8%8B-%E5%B8%8C%E6%9C%9B%E5%AF%B9%E8%BF%98%E6%B2%A1%E6%9C%89%E6%90%AD%E5%BB%BA%E6%88%90%E5%8A%9F%E7%9A%84%E6%9C%8B%E5%8F%8B%E6%8F%90%E4%BE%9B%E4%B8%80%E4%BA%9B%E5%B8%AE%E5%8A%A9/%E6%89%8E%E5%BF%83%E4%BA%86%E8%80%81%E9%93%81.png">
     
     
     <!--- Icon Part-->
@@ -42,7 +46,7 @@
     
     <title>
         
-            People are really easy to die -
+            搭建博客的艰辛历程(希望对还没有搭建成功的朋友提供一些帮助) -
         
         17useBlog
     </title>
@@ -210,7 +214,7 @@
 
         <div class="article-title">
             
-                <h1 class="article-title-regular">People are really easy to die</h1>
+                <h1 class="article-title-regular">搭建博客的艰辛历程(希望对还没有搭建成功的朋友提供一些帮助)</h1>
             
             </div>
             
@@ -232,15 +236,15 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-09-09 17:55:21</span>
-        <span class="mobile">2023-09-09 17:55:21</span>
+        <span class="desktop">2023-09-10 10:43:20</span>
+        <span class="mobile">2023-09-10 10:43:20</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-09-09 18:15:12</span>
-            <span class="mobile">2023-09-09 18:15:12</span>
+            <span class="desktop">2023-09-10 12:02:17</span>
+            <span class="mobile">2023-09-10 12:02:17</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -267,29 +271,94 @@
 
 
         <div class="article-content markdown-body">
-            <p>人真的很容易</p>
-<p>每天不被累死, 就被困死 !</p>
-<img lazyload src="/images/loading.svg" data-src="/2023/09/09/People%20are%20really%20easy%20to%20die/die.png" class title="这是一张图片">
+            <h4 id="开场的胡言乱语"><a href="#开场的胡言乱语" class="headerlink" title="开场的胡言乱语"></a><strong>开场的胡言乱语</strong></h4><p>​	搭建博客的过程属实是有些艰辛的,真的希望大家能一次性成功,但是每个人的</p>
+<p>电脑不同,环境不同,情况不同,需求不同,所以能否帮上大家就另说了.</p>
+<p>​	Git安装是安装上了但是没有像网上说的用git来配置安装hexo,全部步骤都是在管理员身份运行下用cmd进行的操作.</p>
+<h4 id="正文—搭建的过程及一些错误的解决方法"><a href="#正文—搭建的过程及一些错误的解决方法" class="headerlink" title="正文—搭建的过程及一些错误的解决方法"></a>正文—搭建的过程及一些错误的解决方法</h4><p>​	好了正文开始,因为搭建的时候完全没想要记录,我现在只能说凭记忆来讲述过程,大部分报错的问题其实是没有办法给大家反馈的,大家还是从网上找找其他教程,祝大家能成功.</p>
+<h5 id="1-安装Node-js"><a href="#1-安装Node-js" class="headerlink" title="1.安装Node.js"></a>1.安装<a class="link" target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">Node.js <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h5><p>​	对于安装NodeJs我可谓是深恶痛绝,我后续的所有错误都是这玩意安装导致的问题,真的是气死我了.但是安装上倒是也没什么大问题,主要就是同一期安装的软件有些多导致我忘记了它的<strong>安装地址</strong>,所以在此提醒大家要记住自己的安装地址.</p>
+<img lazyload src="/images/loading.svg" data-src="/2023/09/10/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%89%B0%E8%BE%9B%E5%8E%86%E7%A8%8B-%E5%B8%8C%E6%9C%9B%E5%AF%B9%E8%BF%98%E6%B2%A1%E6%9C%89%E6%90%AD%E5%BB%BA%E6%88%90%E5%8A%9F%E7%9A%84%E6%9C%8B%E5%8F%8B%E6%8F%90%E4%BE%9B%E4%B8%80%E4%BA%9B%E5%B8%AE%E5%8A%A9/%E6%89%8E%E5%BF%83%E4%BA%86%E8%80%81%E9%93%81.png" class title="这是一张图片">
 
+<h5 id="2-安装Git"><a href="#2-安装Git" class="headerlink" title="2.安装Git "></a>2.安装<a class="link" target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git  <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h5><p>​	很好我也不知道这个链接能不能正常运行,这玩意在我这里很想玄学.</p>
+<p>这个也没啥吧我在安装的时候没有看教程,一直点下一步还是Next我也不知道,反正没有技术含量.</p>
+<h5 id="3-注册GitHub账号"><a href="#3-注册GitHub账号" class="headerlink" title="3.注册GitHub账号"></a>3.注册<a class="link" target="_blank" rel="noopener" href="https://github.com/">GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>账号</h5><p>​	很好这个就很玄学了,我是借助梯子了没梯子你就等吧.</p>
+<p>当然国内的<a class="link" target="_blank" rel="noopener" href="https://gitee.com/">Gitee <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>也是非常好的选择,操作应该也和GitHub差不多吧我也没尝试.</p>
+<h5 id="4-配置npm"><a href="#4-配置npm" class="headerlink" title="4.配置npm"></a>4.配置npm</h5><p>​	好的,谁告诉你现在就安装hexo的,可以把这个博主拉黑了,真是让我费死劲了,如果没有配置npm的过程你就会在原地转圈,hexo总会出现一堆的报错,你还查找无门,根本不知道自己错在哪里了,我甚至还把错误日志给AI看了看,笑死我了什么乱七八糟的答案,还告诉你删什么文件啥的,反正很乱很不懂. 当然我很希望你们都去踩一遍我踩的坑哈哈哈哈哈哈哈哈哈哈哈哈哈哈.</p>
+<p>​	好的现在开始正经的教程: 我尽量说的简单一点,当然我也不知道哪步是对的哪步是不需要的反正我觉得你按照我的方法应该能成功.</p>
+<ol>
+<li><h6 id="以管理员身份运行cmd"><a href="#以管理员身份运行cmd" class="headerlink" title="以管理员身份运行cmd"></a>以管理员身份运行cmd</h6><p>打开cmd(我不教了你要是不会就自己查去),我是把它发送到桌面然后右键以管理员身份运行的,你们也可以用其他方法</p>
+</li>
+<li><h6 id="在NodeJs下建立”node-global”及”node-cache”两个文件夹"><a href="#在NodeJs下建立”node-global”及”node-cache”两个文件夹" class="headerlink" title="在NodeJs下建立”node_global”及”node_cache”两个文件夹"></a>在NodeJs下建立”node_global”及”node_cache”两个文件夹</h6></li>
+</ol>
+<img lazyload src="/images/loading.svg" data-src="/2023/09/10/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%89%B0%E8%BE%9B%E5%8E%86%E7%A8%8B-%E5%B8%8C%E6%9C%9B%E5%AF%B9%E8%BF%98%E6%B2%A1%E6%9C%89%E6%90%AD%E5%BB%BA%E6%88%90%E5%8A%9F%E7%9A%84%E6%9C%8B%E5%8F%8B%E6%8F%90%E4%BE%9B%E4%B8%80%E4%BA%9B%E5%B8%AE%E5%8A%A9/NodeJs%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84.png" class title="这是一张图片">
 
+<p>安装在这里哦宝宝们,我上面是不是让你们记住了你们的安装路径,要是你没记住来吧加我微信我锤死你</p>
+<h6 id="3-输入以下命令配置npm的全局模块的存放路径以及cache的路径"><a href="#3-输入以下命令配置npm的全局模块的存放路径以及cache的路径" class="headerlink" title="3. 输入以下命令配置npm的全局模块的存放路径以及cache的路径"></a>3. 输入以下命令配置npm的全局模块的存放路径以及cache的路径</h6><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm config set prefix + node_global的路径</span><br><span class="line"></span><br><span class="line">npm config set cache + node_cache的路径</span><br></pre></td></tr></table></figure></div>
+
+<p>​	真的希望你们不要无脑粘贴谢谢</p>
+<h6 id="4-配置系统变量，新建NODE-PATH后输入node-modules的路径"><a href="#4-配置系统变量，新建NODE-PATH后输入node-modules的路径" class="headerlink" title="4. 配置系统变量，新建NODE_PATH后输入node_modules的路径"></a>4. 配置系统变量，新建NODE_PATH后输入node_modules的路径</h6><p>​	我的电脑还是此电脑来着你们看看桌面吧,右键属性</p>
+<img lazyload src="/images/loading.svg" data-src="/2023/09/10/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%89%B0%E8%BE%9B%E5%8E%86%E7%A8%8B-%E5%B8%8C%E6%9C%9B%E5%AF%B9%E8%BF%98%E6%B2%A1%E6%9C%89%E6%90%AD%E5%BB%BA%E6%88%90%E5%8A%9F%E7%9A%84%E6%9C%8B%E5%8F%8B%E6%8F%90%E4%BE%9B%E4%B8%80%E4%BA%9B%E5%B8%AE%E5%8A%A9/%E6%88%91%E7%9C%9F%E6%98%AF%E5%A4%AA%E8%B4%B4%E5%BF%83%E4%BA%86.png" class title="这是一张图片">
+
+<p>​	高级系统设置</p>
+<img lazyload src="/images/loading.svg" data-src="/2023/09/10/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%89%B0%E8%BE%9B%E5%8E%86%E7%A8%8B-%E5%B8%8C%E6%9C%9B%E5%AF%B9%E8%BF%98%E6%B2%A1%E6%9C%89%E6%90%AD%E5%BB%BA%E6%88%90%E5%8A%9F%E7%9A%84%E6%9C%8B%E5%8F%8B%E6%8F%90%E4%BE%9B%E4%B8%80%E4%BA%9B%E5%B8%AE%E5%8A%A9/%E8%B4%B4%E5%BF%832.0.png" class title="这是一张图片">
+
+<p>​	环境变量—系统环境那里新建一个</p>
+<p>​	我记得PATH里要改一个就是你这个地址的变量为</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%NODE_HOME%</span><br></pre></td></tr></table></figure></div>
+
+<p>​	然后你里面还应该有</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%NODE_HOME%\node_cache</span><br><span class="line">%NODE_HOME%\node_global</span><br></pre></td></tr></table></figure></div>
+
+<p>​	没有你自己建一下吧上面应该是存了的</p>
+<ol start="5">
+<li><h6 id="在命令行输入以下命令试着安装express（注：“-g”这个参数意思是装到global目录下，也就是上面说设置的“E-Node-js-node-global”里面）"><a href="#在命令行输入以下命令试着安装express（注：“-g”这个参数意思是装到global目录下，也就是上面说设置的“E-Node-js-node-global”里面）" class="headerlink" title="在命令行输入以下命令试着安装express（注：“-g”这个参数意思是装到global目录下，也就是上面说设置的“E:\Node.js\node_global”里面）"></a>在命令行输入以下命令试着安装express（注：“-g”这个参数意思是装到global目录下，也就是上面说设置的“E:\Node.js\node_global”里面）</h6><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express -g</span><br></pre></td></tr></table></figure></div>
+
+<p>没报错恭喜你后面会很简单</p>
+<p>报错了也没关系因为我也不知道怎么解决自己百度一下吧</p>
+<ol start="6">
+<li><h6 id="在命令行输入node进入编辑模式，输入以下代码测试是否能正常加载模块"><a href="#在命令行输入node进入编辑模式，输入以下代码测试是否能正常加载模块" class="headerlink" title="在命令行输入node进入编辑模式，输入以下代码测试是否能正常加载模块"></a>在命令行输入node进入编辑模式，输入以下代码测试是否能正常加载模块</h6></li>
+</ol>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">require(&#x27;express&#x27;)</span><br></pre></td></tr></table></figure></div>
+
+<p>如果出错了，检查NODE_PATH的路径或者express的路径是否写对</p>
+</li>
+</ol>
+<h5 id="5-全局安装-hexo"><a href="#5-全局安装-hexo" class="headerlink" title="5. 全局安装 hexo"></a>5. 全局安装 hexo</h5><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm  i  hexo-cli -g</span><br></pre></td></tr></table></figure></div>
+
+<p>​	我默认你们都没有报错(也就是没有error) 有的话你们自行找原因吧毕竟这个过程也不能那么顺利</p>
+<h5 id="6-在自己知道的地方新建一个文件夹"><a href="#6-在自己知道的地方新建一个文件夹" class="headerlink" title="6. 在自己知道的地方新建一个文件夹"></a>6. 在自己知道的地方新建一个文件夹</h5><p>​	比如说你可以在D盘(一定不要建在C盘因为C盘里有的文件没法改)里建一个叫blog的文件夹,再用cmd打开</p>
+<p>​	cmd默认可能是在C盘,你可以</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">d:  		#回车</span><br><span class="line">cd blog		#然后打开你新建的文件夹  </span><br></pre></td></tr></table></figure></div>
+
+<h5 id="7-安装依赖文件"><a href="#7-安装依赖文件" class="headerlink" title="7. 安装依赖文件"></a>7. 安装依赖文件</h5><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm  install</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="8-运行hexo"><a href="#8-运行hexo" class="headerlink" title="8. 运行hexo"></a>8. 运行hexo</h5><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></div>
+
+<p>没有报错的情况下打开网站</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:4000</span><br></pre></td></tr></table></figure></div>
+
+<p>如果打开是这个界面</p>
+<img lazyload src="/images/loading.svg" data-src="/2023/09/10/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%89%B0%E8%BE%9B%E5%8E%86%E7%A8%8B-%E5%B8%8C%E6%9C%9B%E5%AF%B9%E8%BF%98%E6%B2%A1%E6%9C%89%E6%90%AD%E5%BB%BA%E6%88%90%E5%8A%9F%E7%9A%84%E6%9C%8B%E5%8F%8B%E6%8F%90%E4%BE%9B%E4%B8%80%E4%BA%9B%E5%B8%AE%E5%8A%A9/hexo%E7%BD%91%E9%A1%B5.png" class title="这是一张图片">
+
+<p>那么太恭喜你了你成功了</p>
+<h4 id="剩下的怎么连接到Github上我打算下回再说-也没准就不说了你们可以浅浅的等一下"><a href="#剩下的怎么连接到Github上我打算下回再说-也没准就不说了你们可以浅浅的等一下" class="headerlink" title="剩下的怎么连接到Github上我打算下回再说,也没准就不说了你们可以浅浅的等一下"></a>剩下的怎么连接到Github上我打算下回再说,也没准就不说了你们可以浅浅的等一下</h4><h4 id="Bye-bye-baby"><a href="#Bye-bye-baby" class="headerlink" title="Bye-bye baby"></a>Bye-bye baby</h4>
         </div>
 
         
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> People are really easy to die</li>
+        <li><strong>Title:</strong> 搭建博客的艰辛历程(希望对还没有搭建成功的朋友提供一些帮助)</li>
         <li><strong>Author:</strong> XueQi</li>
         <li><strong>Created at
-                :</strong> 2023-09-09 17:55:21</li>
+                :</strong> 2023-09-10 10:43:20</li>
         
             <li>
                 <strong>Updated at
-                    :</strong> 2023-09-09 18:15:12
+                    :</strong> 2023-09-10 12:02:17
             </li>
         
         <li>
-            <strong>Link:</strong> https://17use.github.io/2023/09/09/People are really easy to die/
+            <strong>Link:</strong> https://17use.github.io/2023/09/10/搭建博客的艰辛历程-希望对还没有搭建成功的朋友提供一些帮助/
         </li>
         <li>
             <strong>
@@ -313,29 +382,14 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                        rel="prev"
-                        href="/2023/09/10/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%89%B0%E8%BE%9B%E5%8E%86%E7%A8%8B-%E5%B8%8C%E6%9C%9B%E5%AF%B9%E8%BF%98%E6%B2%A1%E6%9C%89%E6%90%AD%E5%BB%BA%E6%88%90%E5%8A%9F%E7%9A%84%E6%9C%8B%E5%8F%8B%E6%8F%90%E4%BE%9B%E4%B8%80%E4%BA%9B%E5%B8%AE%E5%8A%A9/"
-                        >
-                            <span class="left arrow-icon flex justify-center items-center">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">搭建博客的艰辛历程(希望对还没有搭建成功的朋友提供一些帮助)</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next">
                         <a class="next"
                         rel="next"
-                        href="/2023/09/09/hello-world/"
+                        href="/2023/09/09/People%20are%20really%20easy%20to%20die/"
                         >
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">Hello World</span>
+                                <span class="post-nav-title-item">People are really easy to die</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex justify-center items-center">
@@ -400,7 +454,7 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">On this page</div>
-        <div class="page-title">People are really easy to die</div>
+        <div class="page-title">搭建博客的艰辛历程(希望对还没有搭建成功的朋友提供一些帮助)</div>
         
 
     </div>
